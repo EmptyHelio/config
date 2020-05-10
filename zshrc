@@ -3,18 +3,15 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
+export PATH="$PATH:/usr/local/go/bin"
+[[ $UID = 0 ]] && ZSH_DISABLE_COMPFIX=true
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # POWERLEVEL9K_MODE="nerdfont-complete"
- ZSH_THEME="pi"
-ZSH_CUSTOM=$HOME/my_customizations
+ZSH_THEME="pi"
 
-export PATH=$PATH:~/Nim/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/anaconda3/bin
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
@@ -75,17 +72,12 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git 
 zsh-autosuggestions 
 zsh-syntax-highlighting
-debian
 vscode
 web-search
 extract
 )
 
 source $ZSH/oh-my-zsh.sh
-#update tilix
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -111,3 +103,4 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
