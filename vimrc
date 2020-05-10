@@ -49,17 +49,17 @@ filetype plugin indent on    " required
 " Открывать дерево по нажаить Ctrl+n
 map <C-n> :NERDTreeToggle<cr>
 " Немного магии, если мы запустим Vim без указания файла для редактирования,
-" то дерево будет открыто, а если будет указан файл, то дерево 
-" открыто не будет                                                   
-autocmd StdinReadPre * let s:std_in=1                                           
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif     
+" то дерево будет открыто, а если будет указан файл, то дерево
+" открыто не будет
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Открывать новые окна справа
 set splitright
 
 
 
 " Настройки табов для Python, согласно рекоммендациям
-set tabstop=4 
+set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab "Ставим табы пробелами
@@ -83,7 +83,7 @@ syntax on "Включить подсветку синтаксиса
 set mousehide "Спрятать курсор мыши когда набираем текст
 set mouse=a "Включить поддержку мыши
 set termencoding=utf-8 "Кодировка терминала
-set novisualbell "Не мигать 
+set novisualbell "Не мигать
 set t_vb= "Не пищать! (Опции 'не портить текст', к сожалению, нету)
 " Удобное поведение backspace
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -112,7 +112,7 @@ set visualbell t_vb=
 
 "Переключение табов по CMD+number для MacVim
 if has("gui_macvim")
-  " Press Ctrl-Tab to switch between open tabs (like browser tabs) to 
+  " Press Ctrl-Tab to switch between open tabs (like browser tabs) to
   " the right side. Ctrl-Shift-Tab goes the other way.
   noremap <C-Tab> :tabnext<CR>
   noremap <C-S-Tab> :tabprev<CR>
